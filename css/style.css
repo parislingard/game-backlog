@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  margin: 4% 0 3% 0;
+}
+
+header h1 {
+  margin: 0 0 3% 0;
+}

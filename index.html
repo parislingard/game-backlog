@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Game Backlog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <!----->
+    <!-- Font Awesome -->
+    <link 
+      rel="stylesheet" 
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+      crossorigin="anonymous">
+    <!---->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Game Backlog</h1>
+      <button
+        data-toggle="modal"
+        data-target="#modal-form"
+        class="btn btn-outline-success"
+      >
+        Add Game
+      </button>
+      <hr />
+      <div id="modal-form" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Game Form</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="" id="form-add">
+                <div class="form-group">
+                  <label for="title">Title:</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="title"
+                    id="title"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="genre">Genre:</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="genre"
+                    id="genre"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="console">Console:</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="console"
+                    id="console"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="status">Status:</label>
+                  <select class="form-control" name="status" id="status">
+                    <option value="true">Finished</option
+                    ><option value="false">Playing</option></select
+                  >
+                </div>
+                <input
+                  id="submit-btn"
+                  class="btn btn-success"
+                  type="submit"
+                  value="Add Game"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Genre</th>
+              <th scope="col">Console</th>
+              <th scope="col">Status</th>
+              <th scope="col">Remove</th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="js/library.js"></script>
+  </body>
+</html>
