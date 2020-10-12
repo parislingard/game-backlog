@@ -1,10 +1,16 @@
-const GameList = [];
 const tableBody = document.querySelector(".table-body");
 const submitBtn = document.querySelector("#submit-btn");
 const titleInput = document.querySelector("#title");
 const genreInput = document.querySelector("#genre");
 const consoleInput = document.querySelector("#console");
 const statusSelect = document.querySelector("#status");
+
+const game1 = new Game('Super Mario Odyssey', 'Platformer', 'Nintendo Switch', false);
+const game2 = new Game('Bloodborne', 'Action', 'Playstation 4', false);
+const game3 = new Game('NBA 2K20', 'Sports', 'Xbox One', true);
+const game4 = new Game('Wolfenstein', 'Shooter', 'PC', true);
+
+let GameList = [game1, game2, game3, game4];
 
 submitBtn.onclick = (event) => {
   event.preventDefault();
@@ -62,7 +68,6 @@ function render() {
     tr.appendChild(td);
 
     td = document.createElement("td");
-    //td.appendChild(document.createTextNode(game.status));
     btn = document.createElement("button");
     btn.classList.add("btn")
     if(!game.status){
@@ -74,7 +79,6 @@ function render() {
     }
     btn.onclick = () => {
       console.log(game, index);
-      //GameList[index].setStatus();
       game.setStatus();
       render();
     };
